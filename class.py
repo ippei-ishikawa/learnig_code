@@ -1,6 +1,9 @@
 class Player:
-  def attack(self, enemy):
-    print( "戦士は" + enemy + "を攻撃した")
+  def __init__(self, job):
+    self.job = job
 
-player = Player()
+  def attack(self, enemy):
+    print( self.job + "は" + enemy + "を攻撃した")
+
+player = Player("勇者")
 player.attack("スライム")
