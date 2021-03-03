@@ -1,3 +1,4 @@
+# プライベートメソッド
 class Player:
     def __init__(self, job, weapon):
         self.job = job

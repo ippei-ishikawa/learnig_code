@@ -1,0 +1,39 @@
+class Box:
+  def __init__(self, item):
+    self.item = item
+
+  def open(self):
+    print("宝箱を開いた。" + self.item + "を手に入れた。")
+
+# クラスの継承
+class JewelryBox(Box):
+  def look(self):
+    print("宝箱はキラキラと輝いている。")
+box = Box("覇者の剣")
+box.open()
+
+jewelry_box = JewelryBox("魔法の指輪")
+jewelry_box.look()
+jewelry_box.open()
+
+print()
+
+class Box2:
+  def __init__(self, item):
+    self.item = item
+
+  def open(self):
+    print("宝箱を開いた。" + self.item + "を手に入れた。")
+    
+# クラスの継承
+class MagicBox(Box2):
+  def look(self):
+    print("宝箱は不気味に輝いている。")
+
+# クラスのオーバーライド
+  def open(self):
+    print("宝箱を開いた。" + self.item + "に襲われた。")
+
+magic_box = MagicBox("ミミック")
+magic_box.look()
+magic_box.open()
