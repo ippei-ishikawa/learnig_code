@@ -24,7 +24,7 @@ class Box2:
 
   def open(self):
     print("宝箱を開いた。" + self.item + "を手に入れた。")
-    
+
 # クラスの継承
 class MagicBox(Box2):
   def look(self):
@@ -37,3 +37,25 @@ class MagicBox(Box2):
 magic_box = MagicBox("ミミック")
 magic_box.look()
 magic_box.open()
+
+print()
+class Player:
+  def __init__(self, name):
+    self.name = name
+
+  def attack(self, enemy):
+    print(self.name + "は、" + enemy + "を攻撃した！")
+
+class Wizard(Player):
+  def attack(self, enemy):
+    print(self.name + "は" + enemy + "に炎を放った！")
+
+
+print("=== パーティーでミミックと戦う ===")
+hero = Player("勇者")
+warrior = Player("戦士")
+wizard = Wizard("魔法使い")
+
+party = [hero, warrior, wizard]
+for member in party:
+    member.attack("ミミック")
